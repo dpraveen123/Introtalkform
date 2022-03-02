@@ -1,0 +1,7 @@
+.pform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    border: solid 1px red;
+}

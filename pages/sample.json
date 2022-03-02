@@ -1,0 +1,25 @@
+{
+    "routineid": "id5",
+    "title": "Yoga Nidra",
+    "description": "Research on the overall benefits of yoga and yoga nidra has revealed improvements in emotional self-regulation",
+    "userids": [
+        "divyasri@gmail.com"
+    ],
+    "duration": "20 minutes",
+    "subtasks": [
+        {
+            "title": "Yoga Nidra",
+            "duration": "20 mins"
+        }
+    ],
+    "references": [
+        {
+            "title": "Yoga Nidra",
+            "link": "https://www.youtube.com/watch?v=zLJu3wQA1Ko&t=12s"
+        }
+    ],
+    "location": "bhimavaram",
+    "commentids": [
+        ""
+    ]
+}

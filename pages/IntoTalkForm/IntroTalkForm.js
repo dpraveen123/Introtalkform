@@ -114,7 +114,7 @@ export default class Introtalkform extends Component {
                                         {(this.state.inputEmail == "" && this.state.emptyEmail) ? <p className={styles.error_msg}>Please fill out this field.</p> : this.state.isValidEmail == false ? <p className={styles.error_msg}>Please enter valid email.</p> : ""}
 
                                         <label>Phone*</label>
-                                        <input className={styles.input_form} onChange={this.inputPhoneNumber} type="number" maxLength={10}  ></input>
+                                        <input className={styles.input_form} onChange={this.inputPhoneNumber} type="tel" maxLength={10}  ></input>
                                         {(this.state.inputNumber == null && this.state.emptyNumber == 1) ? <p className={styles.error_msg}> Please fill out this field.</p> : ""}
 
                                         <label for="cars">Select*</label>

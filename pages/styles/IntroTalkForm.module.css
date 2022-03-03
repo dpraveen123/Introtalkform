@@ -61,6 +61,20 @@
     color: aliceblue;
     font-size: 17px;
     font-weight: bold;
+    cursor: pointer;
+
+}
+
+.disabled_submit_form{
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #d7dfe4;
+    width: 80%;
+    color: aliceblue;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .submit_button{
@@ -83,3 +97,20 @@
     font-size: 12px;
     font-weight: 500;
 }
+
+
+/* input::-webkit-outer-spin-button, */
+/* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* Firefox */
+.number{
+  -moz-appearance: textfield;
+
+}
+
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */

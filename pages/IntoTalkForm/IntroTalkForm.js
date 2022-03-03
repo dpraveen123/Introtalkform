@@ -74,23 +74,23 @@ export default class Introtalkform extends Component {
         }
 
     }
-    validate = (evt) => {
-        var theEvent = evt || window.event;
+    // validate = (evt) => {
+    //     var theEvent = evt || window.event;
 
-        // Handle paste
-        if (theEvent.type === 'paste') {
-            key = event.clipboardData.getData('text/plain');
-        } else {
-            // Handle key press
-            var key = theEvent.keyCode || theEvent.which;
-            key = String.fromCharCode(key);
-        }
-        var regex = /[0-9]|\./;
-        if (!regex.test(key)) {
-            theEvent.returnValue = false;
-            if (theEvent.preventDefault) theEvent.preventDefault();
-        }
-    }
+    //     // Handle paste
+    //     if (theEvent.type === 'paste') {
+    //         key = event.clipboardData.getData('text/plain');
+    //     } else {
+    //         // Handle key press
+    //         var key = theEvent.keyCode || theEvent.which;
+    //         key = String.fromCharCode(key);
+    //     }
+    //     var regex = /[0-9]|\./;
+    //     if (!regex.test(key)) {
+    //         theEvent.returnValue = false;
+    //         if (theEvent.preventDefault) theEvent.preventDefault();
+    //     }
+    // }
     render() {
         return (
             <div>
@@ -114,7 +114,7 @@ export default class Introtalkform extends Component {
                                         {(this.state.inputEmail == "" && this.state.emptyEmail) ? <p className={styles.error_msg}>Please fill out this field.</p> : this.state.isValidEmail == false ? <p className={styles.error_msg}>Please enter valid email.</p> : ""}
 
                                         <label>Phone*</label>
-                                        <input className={styles.input_form} onChange={this.inputPhoneNumber} type="tel" maxLength={10} onkeypress='validate(event)'></input>
+                                        <input className={styles.input_form} onChange={this.inputPhoneNumber} type="number" maxLength={10}  ></input>
                                         {(this.state.inputNumber == null && this.state.emptyNumber == 1) ? <p className={styles.error_msg}> Please fill out this field.</p> : ""}
 
                                         <label for="cars">Select*</label>
@@ -141,8 +141,14 @@ export default class Introtalkform extends Component {
                                             <input type="radio" id="age2" name="age" value="60"></input>
                                             <label for="age2">No</label>
                                         </div>
+
+
                                         <div className={styles.submit_button} onClick={this.subscribeForm}>
-                                            <button className={styles.submit_form} >Sign up for the introductory talk now</button>
+                                            {
+                                                (this.state.inputName == "" || this.state.inputEmail == "" || this.state.inputNumber == null) ?
+                                                    <button className={styles.disabled_submit_form} disabled >Sign up for the introductory talk now</button> : <button className={styles.submit_form} >Sign up for the introductory talk now</button>
+                                            }
+
                                         </div>
                                     </div>
                                     <div className={styles.ending_text}>
